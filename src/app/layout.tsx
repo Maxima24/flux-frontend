@@ -28,12 +28,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black text-black dark:text-white`}
       >
-        <ThemeProvider defaultTheme="system">
+        <ThemeProvider defaultTheme="dark">
           <Web3Provider>
-            {/* <FloatingOrbs /> */}
-            {/* <WaveBackground /> */}
+            <FloatingOrbs />
             {children}
           </Web3Provider>
         </ThemeProvider>
