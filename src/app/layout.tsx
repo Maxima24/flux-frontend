@@ -35,7 +35,7 @@ function PlatformHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <ThemeToogle />
+          <ThemeToggle />
           <ConnectWallet onConnect={() => router.push("/dashboard")} />
         </div>
       </div>
