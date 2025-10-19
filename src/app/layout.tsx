@@ -1,16 +1,15 @@
 "use client";
 
-import { SidebarProvider,useSidebar} from "@/components//ui/sidebar";
-import { ThemeToggle } from "@/components//ui/ThemeToogle";
-import { PageLoader } from "@/components//ui/page-loader";
+import { SidebarProvider, useSidebar } from "@/components/ui/sidebar";
+import { ThemeToggle } from "@/components/ui/ThemeToogle";
+import { PageLoader } from "@/components/ui/page-loader";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import AppSidebar from "@/components//shared/appsidebar";
-import ConnectWallet  from '@/components/web3/ConnectWallet';
+import AppSidebar from "@/components/shared/appsidebar";
+
 function PlatformHeader() {
   const router = useRouter();
   const marketingLinks = [
-    // { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/how-it-works", label: "How It Works" },
     { href: "/pricing", label: "Pricing" },
@@ -36,7 +35,7 @@ function PlatformHeader() {
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          <ConnectWallet onConnect={() => router.push("/dashboard")} />
+          {/* ConnectWallet removed - add to individual pages if needed */}
         </div>
       </div>
     </header>
@@ -45,7 +44,7 @@ function PlatformHeader() {
 
 function PlatformContent({ children }: { children: React.ReactNode }) {
   const { state } = useSidebar();
-  const isCollapsed = state  === "collapsed";
+  const isCollapsed = state === "collapsed";
 
   return (
     <div className="min-h-screen w-full bg-background">
