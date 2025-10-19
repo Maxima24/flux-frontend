@@ -2,8 +2,8 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import  ConnectWallet  from "components/web3/ConnectWallet";
-import { WaveBackground } from "components/ui/background";
+import  ConnectWallet  from "@/components/web3/ConnectWallet";
+import { WaveBackground } from "@/components/ui/background";
 function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 2000], [0, 150]); //

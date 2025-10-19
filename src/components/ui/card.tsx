@@ -2,7 +2,7 @@
 
 import { HTMLAttributes, forwardRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "lib/utils";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export const cardVariants = cva(
