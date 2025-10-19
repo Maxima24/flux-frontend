@@ -1,4 +1,5 @@
 // ...existing code...
+"use client"
 import AnalyticsClient from "./AnalyticsClient"; // or the client component used
 import Card from "@/components/ui/card";
 import Button  from "@/components/ui/button";
