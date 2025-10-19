@@ -1,27 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
-import { Suspense } from "react";
+import { Hero, Features, Stats, CTA } from "../components/landing";
+import ConnectWallet from "@/components/web3/ConnectWallet";
 
-// a dynamic import with SSR enabled for better SEO
-const Hero = dynamic(
-  () => import("../components/landing").then((mod) => mod.Hero),
-  { ssr: true }
-);
-const Features = dynamic( 
-  () => import("../components/landing").then((mod) => mod.Features),
-  { ssr: true }
-);
-const Stats = dynamic(
-  () => import("../components/landing").then((mod) => mod.Stats),
-  { ssr: true }
-);
-const CTA = dynamic(
-  () => import("../components/landing").then((mod) => mod.CTA),
-  { ssr: true }
-);
-
-import  ConnectWallet from "@/components/web3/ConnectWallet";
 export default function MarketingPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
@@ -29,6 +10,7 @@ export default function MarketingPage() {
         .dark { --bg: 0 0% 0%; }
         .light { --bg: 0 0% 100%; }
       `}</style>
+
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-orange-500/10 bg-black/20 backdrop-blur-xl">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -40,34 +22,10 @@ export default function MarketingPage() {
       </header>
 
       <main className="pt-20">
-        <Suspense
-          fallback={
-            <div className="animate-pulse w-full h-screen bg-gradient-to-b from-black via-dark-900 to-black" />
-          }
-        >
-          <Hero />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="animate-pulse w-full py-32 bg-gradient-to-b from-black via-dark-900 to-black" />
-          }
-        >
-          <Features />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="animate-pulse w-full py-20 bg-gradient-to-b from-black via-dark-900 to-black" />
-          }
-        >
-          <Stats />
-        </Suspense>
-        <Suspense
-          fallback={
-            <div className="animate-pulse w-full py-20 bg-gradient-to-b from-black via-dark-900 to-black" />
-          }
-        >
-          <CTA />
-        </Suspense>
+        <Hero />
+        <Features />
+        <Stats />
+        <CTA />
       </main>
 
       <footer className="border-t border-orange-500/10 py-8 text-center text-gray-500">
