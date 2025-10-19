@@ -1,10 +1,10 @@
 "use client";
-import  Button from "components/ui/button";
-import  Card  from "components/ui/card";
+import  Button from "@/components/ui/button";
+import  Card  from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Link from "next/link";
 // Example in /app/(marketing)/about/page.tsx
-import { ThemeToggle } from "components/ui/ThemeToogle";
+import { ThemeToggle } from "@/components/ui/ThemeToogle";
 
 const plans = [
   {
