@@ -1,8 +1,8 @@
 "use client";
 
-import { ConnectWallet } from "components/web3/connect-wallet";
+import { ConnectWallet } from "components/web3/ConnectWallet";
 import { SidebarProvider,useSidebar} from "components/ui/sidebar";
-import { ThemeToggle } from "components/ui/theme_toggle";
+import { ThemeToogle } from "components/ui/ThemeToogle";
 import { PageLoader } from "components/ui/page-loader";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -35,7 +35,7 @@ function PlatformHeader() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
+          <ThemeToogle />
           <ConnectWallet onConnect={() => router.push("/dashboard")} />
         </div>
       </div>
