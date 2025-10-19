@@ -32,7 +32,7 @@ interface DynamicChartProps {
   label: string;
 }
 
-export function DynamicChart({ data, labels, label }: DynamicChartProps) {
+const DynamicChart= ({ data, labels, label }: DynamicChartProps) =>{
 
   const { theme } = useTheme();
   const textColor = theme === "dark" ? "#9ca3af" : "#4b5563";
@@ -111,3 +111,4 @@ export function DynamicChart({ data, labels, label }: DynamicChartProps) {
     </div>
   );
 }
+export default DynamicChart
