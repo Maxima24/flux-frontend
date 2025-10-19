@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = 'force-dynamic';
+
 import { SidebarProvider, useSidebar } from "@/components/ui/sidebar";
 import { ThemeToggle } from "@/components/ui/ThemeToogle";
 import { PageLoader } from "@/components/ui/page-loader";
@@ -35,7 +37,6 @@ function PlatformHeader() {
 
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          {/* ConnectWallet removed - add to individual pages if needed */}
         </div>
       </div>
     </header>
@@ -59,10 +60,8 @@ function PlatformContent({ children }: { children: React.ReactNode }) {
             ${isCollapsed ? "ml-[4.3rem]" : "ml-64"}
           `}
         >
-          {/* Header */}
           <PlatformHeader />
 
-          {/* Main content */}
           <main className="flex-1 overflow-auto bg-background text-foreground transition-colors duration-300 border-t border-orange-500/20">
             <div
               className={`
@@ -95,4 +94,4 @@ export default function PlatformLayout({
       <PlatformContent>{children}</PlatformContent>
     </SidebarProvider>
   );
-}
+} 
