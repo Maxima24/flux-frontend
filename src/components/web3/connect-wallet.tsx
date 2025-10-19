@@ -1,6 +1,6 @@
 "use client";
 
-import { Button}  from "@component/ui/Button";
+import { Button}  from "@/component/ui/button";
 import { formatAddress } from "@/lib/utils";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useEffect, useCallback } from "react";
