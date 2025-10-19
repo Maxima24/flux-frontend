@@ -39,23 +39,24 @@ const agents = [
 export default function AgentsPage() {
   return (
     <div className="p-6">
-      <div className="mb-8 flex items-center justify-between">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="mb-8 flex items-center justify-between"
+      >
+        <div>
           <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 bg-clip-text text-transparent pb-1">
             AI Agents
           </div>
           <p className="text-muted-foreground text-lg">
             Deploy and manage autonomous AI agents for yield optimization
           </p>
-        </motion.div>
-
-        <Button variant="gradient" className="text-sm">Deploy New Agent</Button>
-      </div>
+        </div>
+        <Button variant="gradient" className="text-sm">
+          Deploy New Agent
+        </Button>
+      </motion.div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {agents.map((agent, index) => (
@@ -68,6 +69,7 @@ export default function AgentsPage() {
             <Card
               variant="glass"
               hover="lift"
+              isAnimated={true} // ensures motion works inside Card
               className="group relative overflow-hidden hover:h-70"
             >
               <div className="p-6">
@@ -84,9 +86,7 @@ export default function AgentsPage() {
                   </div>
                 </div>
 
-                <p className="mb-4 text-sm text-gray-400">
-                  {agent.description}
-                </p>
+                <p className="mb-4 text-sm text-gray-400">{agent.description}</p>
 
                 <div className="mb-4 grid grid-cols-2 gap-4">
                   <div>
@@ -95,9 +95,7 @@ export default function AgentsPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Current APY</p>
-                    <p className="font-semibold text-primary-500">
-                      {agent.apy}
-                    </p>
+                    <p className="font-semibold text-primary-500">{agent.apy}</p>
                   </div>
                 </div>
 
@@ -131,6 +129,7 @@ export default function AgentsPage() {
           <Card
             variant="glass"
             hover="lift"
+            isAnimated={true} // motion-safe
             className="flex min-h-[300px] cursor-pointer items-center justify-center p-6 hover:border-primary-500/50"
           >
             <div className="text-center">
