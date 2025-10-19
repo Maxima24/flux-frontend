@@ -5,24 +5,23 @@ import { Suspense } from "react";
 
 // a dynamic import with SSR enabled for better SEO
 const Hero = dynamic(
-  () => import("@/components/landing").then((mod) => mod.Hero),
+  () => import("../components/landing").then((mod) => mod.Hero),
   { ssr: true }
 );
 const Features = dynamic( 
-  () => import("@/components/landing").then((mod) => mod.Features),
+  () => import("../components/landing").then((mod) => mod.Features),
   { ssr: true }
 );
 const Stats = dynamic(
-  () => import("@/components/landing").then((mod) => mod.Stats),
+  () => import("../components/landing").then((mod) => mod.Stats),
   { ssr: true }
 );
 const CTA = dynamic(
-  () => import("@/components/landing").then((mod) => mod.CTA),
+  () => import("../components/landing").then((mod) => mod.CTA),
   { ssr: true }
 );
 
-import { ConnectWallet } from "@/components/web3/connect-wallet";
-
+import { ConnectWallet } from "components/web3/ConnectWallet";
 export default function MarketingPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
