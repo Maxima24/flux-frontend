@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
+import { Card } from "components/ui/card";
 import {
   Activity,
   TrendingUp,
@@ -11,8 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
-import { Chart } from "@/components/ui/chart";
-
+import { Chart } from "components/ui/chart";
 
 const statsCards = [
   {
@@ -81,7 +80,7 @@ export default function DashboardPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <Card className="group relative overflow-hidden p-6 bg-background hover:border-current transition-all duration-300 !border-[#0000001f]" variant="outline">
+              <Card className="group relative overflow-hidden p-6 bg-background hover:border-current transition-all duration-300 !border-[#0000001f]" variant="glass">
                 {/* Background gradient on hover */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${stat.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
