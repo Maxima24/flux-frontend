@@ -15,10 +15,10 @@ const ConnectWalletInner = dynamic(
   }
 );
 
-export default function ConnectWallet() {
+export default function ConnectWallet({ onConnect }: { onConnect?: () => void }) {
   return (
     <Suspense fallback={null}>
-      <ConnectWalletInner />
+      <ConnectWalletInner onConnect={onConnect} />
     </Suspense>
   );
 }
