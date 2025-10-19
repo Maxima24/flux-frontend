@@ -13,8 +13,8 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { useSidebar } from "components/ui/sidebar";
-import { useTheme } from "components/providers/theme-provider";
+import { useSidebar } from "@/componentsui/sidebar";
+import { useTheme } from "@/componentsproviders/theme-provider";
 interface SidebarItem {
   title: string;
   icon: React.ElementType;

@@ -1,7 +1,7 @@
 import React from 'react'
-import { DynamicChart } from "components/ui/dynamic-chart";
+import { DynamicChart } from "@/componentsui/dynamic-chart";
 import { motion } from "framer-motion";
-import  Card  from "components/ui/card";
+import  Card  from "@/componentsui/card";
 import { Activity, DollarSign, TrendingUp, Users } from "lucide-react";
 
 const stats = [

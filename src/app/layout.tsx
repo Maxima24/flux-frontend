@@ -1,11 +1,11 @@
 "use client";
 
-import { SidebarProvider,useSidebar} from "@/components/ui/sidebar";
-import { ThemeToggle } from "@/components/ui/ThemeToogle";
-import { PageLoader } from "@/components/ui/page-loader";
+import { SidebarProvider,useSidebar} from "@/components//ui/sidebar";
+import { ThemeToggle } from "@/components//ui/ThemeToogle";
+import { PageLoader } from "@/components//ui/page-loader";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import AppSidebar from "@/components/shared/appsidebar";
+import AppSidebar from "@/components//shared/appsidebar";
 import ConnectWallet  from '@/components/web3/ConnectWallet';
 function PlatformHeader() {
   const router = useRouter();

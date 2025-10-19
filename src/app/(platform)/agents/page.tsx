@@ -1,8 +1,8 @@
 import {AgentsClient} from "./AgentsClient";
-import  Card  from "components/ui/card";
-import  Button  from "components/ui/button";
+import  Card  from "@/componentsui/card";
+import  Button  from "@/componentsui/button";
 import { motion } from "framer-motion";
-import ConnectWallet from "components/web3/ConnectWallet";
+import ConnectWallet from "@/componentsweb3/ConnectWallet";
 
 console.log("AgentsClient:", typeof AgentsClient);
 console.log("Card:", typeof Card);

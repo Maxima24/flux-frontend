@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import  ConnectWallet from "../web3/ConnectWallet";
-import { ThemeToggle } from "components/ui/ThemeToogle";
+import { ThemeToggle } from "@/componentsui/ThemeToogle";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import  Card  from "components/ui/card";
+import  Card  from "@/componentsui/card";
 import {
   Activity,
   TrendingUp,
@@ -11,7 +11,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
-import { Chart } from "components/ui/chart";
+import { Chart } from "@/componentsui/chart";
 
 const statsCards = [
   {
