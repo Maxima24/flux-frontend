@@ -39,11 +39,9 @@ export interface CardProps
 const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant, hover, isAnimated = false, ...props }, ref) => {
     if (isAnimated) {
-      // Only pass motion props and valid HTML props for motion.div
       const { onDrag, onDragEnd, onDragStart, ...rest } = props as any;
       return (
         <motion.div
-          ref={ref}
           className={cn(cardVariants({ variant, hover, className }))}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

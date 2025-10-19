@@ -67,7 +67,7 @@ export default function AgentsPage() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
             <Card
-              variant="glass"
+              variant="gradient"
               hover="lift"
               isAnimated={true} // ensures motion works inside Card
               className="group relative overflow-hidden hover:h-70"
@@ -111,7 +111,7 @@ export default function AgentsPage() {
                 </div>
 
                 <div className="absolute inset-x-0 bottom-0 flex translate-y-full border-t border-white/10 bg-white/5 p-4 group-hover:translate-y-0">
-                  <Button variant="gradient" className="w-full">
+                  <Button variant="default" className="w-full">
                     Manage Agent
                   </Button>
                 </div>
