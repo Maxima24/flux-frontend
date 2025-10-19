@@ -1,4 +1,6 @@
-import { ConnectWallet } from "@/components/web3/connect-wallet";
+"use client"
+import { ConnectWallet } from "@/components/web3/connect-wallet"
+;
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Header } from "@/components/shared/header";
