@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/component/ui/button";
+import { Button } from "components/ui/button";
 import {
   PieChart,
   ArrowUpRight,
