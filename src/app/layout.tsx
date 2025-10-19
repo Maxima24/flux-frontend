@@ -1,42 +1,99 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import { Web3Provider } from "@/components/providers/web3-provider";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { FloatingOrbs, WaveBackground } from "@/components/ui/background";
+"use client";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { ConnectWallet } from "components/web3/ConnectWallet";
+import { SidebarProvider,useSidebar} from "components/ui/sidebar";
+import { ThemeToogle } from "components/ui/ThemeToogle";
+import { PageLoader } from "components/ui/page-loader";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import AppSidebar from "components/shared/appsidebar";
+function PlatformHeader() {
+  const router = useRouter();
+  const marketingLinks = [
+    // { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/how-it-works", label: "How It Works" },
+    { href: "/pricing", label: "Pricing" },
+  ];
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
-  title: "Flux AI - Web3 AI Agent Platform",
-  description: "AI-powered DeFi yield optimization platform",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black text-black dark:text-white`}
-      >
-        <ThemeProvider defaultTheme="dark">
-          <Web3Provider>
-            <FloatingOrbs />
-            {children}
-          </Web3Provider>
-        </ThemeProvider>
-      </body>
-    </html>
+    <header className="sticky top-0 ml-10 z-30 bg-background/80 backdrop-blur-xl transition-all duration-300">
+      <div className="flex h-16 items-center justify-between px-4">
+        <nav className="hidden md:block">
+          <ul className="flex items-center gap-6">
+            {marketingLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-sm font-medium text-muted-foreground transition-colors hover:text-orange-500"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-4">
+          <ThemeToogle />
+          <ConnectWallet onConnect={() => router.push("/dashboard")} />
+        </div>
+      </div>
+    </header>
+  );
+}
+
+function PlatformContent({ children }: { children: React.ReactNode }) {
+  const { state } = useSidebar();
+  const isCollapsed = state  === "collapsed";
+
+  return (
+    <div className="min-h-screen w-full bg-background">
+      <PageLoader />
+      <div className="flex">
+        <AppSidebar />
+
+        <div
+          className={`
+            flex-1 flex flex-col overflow-hidden
+            transition-all duration-300 ease-in-out
+            ${isCollapsed ? "ml-[4.3rem]" : "ml-64"}
+          `}
+        >
+          {/* Header */}
+          <PlatformHeader />
+
+          {/* Main content */}
+          <main className="flex-1 overflow-auto bg-background text-foreground transition-colors duration-300 border-t border-orange-500/20">
+            <div
+              className={`
+                min-h-screen w-full px-4 py-6 
+                transition-all duration-300 ease-in-out 
+                sm:px-6 lg:px-8
+                ${
+                  isCollapsed
+                    ? "max-w-[calc(100vw-4.3rem)]"
+                    : "max-w-[calc(100vw-16rem)]"
+                }
+              `}
+            >
+              {children}
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function PlatformLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <SidebarProvider>
+      <PlatformContent>{children}</PlatformContent>
+    </SidebarProvider>
   );
 }
