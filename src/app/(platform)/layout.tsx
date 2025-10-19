@@ -1,15 +1,13 @@
 "use client";
 
-import { ConnectWallet } from "@/components/web3/connect-wallet";
-import AppSidebar from "@/components/shared/appsidebar";
-import { SidebarProvider, useSidebar } from "@/components/ui/sidebar";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { PageLoader } from "@/components/ui/page-loader";
-
+import { ConnectWallet } from "components/web3/connect-wallet";
+import { SidebarProvider,useSidebar} from "components/ui/sidebar";
+import { ThemeProvider } from "components/providers/theme-provider";
+import { ThemeToggle } from "components/ui/theme-toogle";
+import { PageLoader } from "components/ui/page-loader";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import AppSidebar from "components/shared/appsidebar";
 function PlatformHeader() {
   const router = useRouter();
   const marketingLinks = [
