@@ -3,7 +3,7 @@
 import * as React from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { cn } from "@/lib/utils";
-import { Button } from "./button";
+import { Button } from "./Button";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronsLeftRightEllipsis } from "lucide-react";
