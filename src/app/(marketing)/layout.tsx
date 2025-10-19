@@ -1,8 +1,8 @@
 "use client"
-import  ConnectWallet  from "@/componentsweb3/ConnectWallet";
+import  ConnectWallet  from "@/components/web3/ConnectWallet";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Header } from "@components/shared/header";
+import { Header } from "@/components/shared/header";
 
 export default function MarketingLayout({
   children,
