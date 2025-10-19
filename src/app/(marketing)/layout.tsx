@@ -1,5 +1,5 @@
 "use client"
-import { ConnectWallet } from "components/web3/connect-wallet-inner";
+import  ConnectWallet  from "components/web3/ConnectWallet";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Header } from "components/shared/header";

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ThemeToggle } from "components/ui/ThemeToogle";
+console.log("ThemeToggle type:", typeof ThemeToggle);
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-24">

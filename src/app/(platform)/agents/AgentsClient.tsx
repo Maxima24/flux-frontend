@@ -1,7 +1,8 @@
+// ...existing code...
 "use client";
 
-import { Button } from "components/ui/button";
-import { Card } from "components/ui/card";
+import  Button  from "components/ui/button";
+import  Card  from "components/ui/card";
 import { motion } from "framer-motion";
 
 const agents = [
@@ -12,62 +13,40 @@ const agents = [
 
 export function AgentsClient() {
   return (
-    <div className="p-6">
-      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-8 flex items-center justify-between">
-        <div>
-          <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 bg-clip-text text-transparent pb-1">AI Agents</div>
-          <p className="text-muted-foreground text-lg">Deploy and manage autonomous AI agents for yield optimization</p>
-        </div>
-        <Button variant="gradient" className="text-sm">Deploy New Agent</Button>
-      </motion.div>
+    // <div className="p-6">
+    //   <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="mb-8 flex items-center justify-between">
+    //     <div>
+    //       <h1 className="text-3xl font-bold">AI Agents</h1>
+    //       <p className="text-sm text-gray-400">Deploy and manage autonomous AI agents</p>
+    //     </div>
+    //     <Button variant="gradient">Deploy New Agent</Button>
+    //   </motion.div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {agents.map((agent, index) => (
-          <motion.div key={agent.id} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: index * 0.1 }}>
-            <Card variant="glass" hover="lift" className="group relative overflow-hidden">
-              <div className="p-6">
-                <div className="mb-4 flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">{agent.name}</h3>
-                  <div className={`rounded-full px-2 py-1 text-xs font-medium ${agent.status === "active" ? "bg-green-500/20 text-green-500" : "bg-gray-500/20 text-gray-400"}`}>{agent.status}</div>
-                </div>
-
-                <p className="mb-4 text-sm text-gray-400">{agent.description}</p>
-
-                <div className="mb-4 grid grid-cols-2 gap-4">
-                  <div>
-                    <p className="text-sm text-gray-400">TVL</p>
-                    <p className="font-semibold">{agent.tvl}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-400">Current APY</p>
-                    <p className="font-semibold text-primary-500">{agent.apy}</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {agent.protocols.map((p) => <div key={p} className="rounded-full bg-white/5 px-2 py-1 text-xs">{p}</div>)}
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 flex translate-y-full border-t border-white/10 bg-white/5 p-4 group-hover:translate-y-0">
-                  <Button variant="gradient" className="w-full">Manage Agent</Button>
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-        ))}
-
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: agents.length * 0.1 }}>
-          <Card variant="glass" hover="lift" className="flex min-h-[300px] cursor-pointer items-center justify-center p-6 hover:border-primary-500/50">
-            <div className="text-center">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full border-2 border-dashed border-gray-400">
-                <svg className="h-6 w-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
-              </div>
-              <h3 className="mb-2 text-lg font-semibold">Deploy New Agent</h3>
-              <p className="text-sm text-gray-400">Create and configure a new AI agent for your portfolio</p>
-            </div>
-          </Card>
-        </motion.div>
-      </div>
-    </div>
+    //   <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    //     {agents.map((a, i) => (
+    //       <motion.div key={a.id} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.08 }}>
+    //         <Card variant="glass" hover="lift" className="p-6">
+    //           <div className="mb-3 flex items-center justify-between">
+    //             <h3 className="font-semibold">{a.name}</h3>
+    //             <span className={`text-xs px-2 py-1 rounded-full ${a.status === "active" ? "bg-green-500/20 text-green-500" : "bg-gray-500/20 text-gray-400"}`}>{a.status}</span>
+    //           </div>
+    //           <p className="text-sm text-gray-400 mb-4">{a.description}</p>
+    //           <div className="flex items-center justify-between text-sm">
+    //             <div>
+    //               <div className="text-xs text-gray-400">TVL</div>
+    //               <div className="font-semibold">{a.tvl}</div>
+    //             </div>
+    //             <div>
+    //               <div className="text-xs text-gray-400">APY</div>
+    //               <div className="font-semibold text-primary-500">{a.apy}</div>
+    //             </div>
+    //           </div>
+    //         </Card>
+    //       </motion.div>
+    //     ))}
+    //   </div>
+    // </div>
+    <Card className="p-6">Card test</Card>
   );
 }
+// ...existing code...

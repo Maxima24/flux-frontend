@@ -21,7 +21,7 @@ const CTA = dynamic(
   { ssr: true }
 );
 
-import { ConnectWallet } from "components/web3/ConnectWallet";
+import  ConnectWallet from "components/web3/ConnectWallet";
 export default function MarketingPage() {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">

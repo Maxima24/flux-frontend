@@ -2,7 +2,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ConnectWallet } from "components/web3/ConnectWallet";
+import  ConnectWallet  from "components/web3/ConnectWallet";
 import { WaveBackground } from "components/ui/background";
 function Hero() {
   const { scrollY } = useScroll();
@@ -122,11 +122,6 @@ function Features() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               key={feature.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.8 }}
-              whileHover={{ scale: 1.05, y: -10 }}
               className={`rounded-2xl border border-orange-500/20 bg-gradient-to-br ${feature.gradient} backdrop-blur-xl p-8 transition-all duration-300`}
             >
               <div className="text-5xl mb-6">{feature.icon}</div>

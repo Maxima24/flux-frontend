@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "components/ui/button";
+import  Button  from "components/ui/button";
 import { formatAddress } from "lib/utils";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useEffect, useCallback } from "react";
@@ -11,7 +11,7 @@ interface ConnectWalletProps {
   onConnect?: () => void;
 }
 
-export function ConnectWallet({ onConnect }: ConnectWalletProps = {}) {
+export function ConnectWalletInner({ onConnect }: ConnectWalletProps = {}) {
   const router = useRouter();
 
   const handleConnect = useCallback(() => {

@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
     config.externals.push("pino-pretty", "lokijs", "encoding");
     return config;
   },
-  typescript: {
+  typescript: { 
     ignoreBuildErrors: true, // keep type checking if you want
   },
   eslint: {

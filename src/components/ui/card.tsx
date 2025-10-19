@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "lib/utils";
 import { motion } from "framer-motion";
 
-const cardVariants = cva(
+export const cardVariants = cva(
   "rounded-lg bg-card border !border-orange-500/20 text-card-foreground transition-all backdrop-blur-md",
   {
     variants: {
@@ -81,4 +81,5 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
 
 Card.displayName = "Card";
 
-export { Card, cardVariants };
+
+export default Card;
