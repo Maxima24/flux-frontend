@@ -12,6 +12,9 @@ console.log("ConnectWallet:", typeof ConnectWallet);
 // ...existing code...
 export default function AgentsPage() {
   //  return <div style={{ padding: 24 }}>Agents client placeholder</div>;
-  return <AgentsClient />;
+  return <div>
+    hi
+  </div>
+  ;
 }
 // ...
