@@ -11,8 +11,8 @@ console.log("Card:", typeof Card);
 console.log("Button:", typeof Button);
 console.log("motion:", typeof motion);
 console.log("ConnectWallet:", typeof ConnectWallet);
-
-export default function AnalyticsPage() {
+ const  AnalyticsPage=() =>{
   return <AnalyticsClient />;
 }
+export default AnalyticsPage
 // ...existing code...
