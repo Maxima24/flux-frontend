@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@component/ui/Button";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/Card";
 import { motion } from "framer-motion";
 
 const agents = [

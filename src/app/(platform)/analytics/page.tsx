@@ -2,7 +2,7 @@
 
 import { DynamicChart } from "@/components/ui/dynamic-chart";
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
+import { Card } from "@/components/ui/Card";
 import { Activity, DollarSign, TrendingUp, Users } from "lucide-react";
 
 const stats = [
