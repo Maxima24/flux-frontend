@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Card } from "components/ui/card";
 import { motion } from "framer-motion";
 import {
   Area,
@@ -11,8 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import { formatAmount, formatPercentage } from "@/lib/utils";
-
+import { formatAmount,formatPercentage } from "lib/utils";
 // Sample data - replace with real data from your backend
 const performanceData = Array.from({ length: 30 }, (_, i) => ({
   date: new Date(

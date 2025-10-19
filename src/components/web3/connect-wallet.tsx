@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "components/ui/button";
-import { formatAddress } from "@/lib/utils";
+import { formatAddress } from "lib/utils";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
